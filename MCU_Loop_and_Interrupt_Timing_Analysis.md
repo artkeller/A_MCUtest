@@ -142,3 +142,7 @@ void loop() {
 ```
 
 <img width="576" alt="Timing" src="https://github.com/artkeller/tobedefined/assets/16447285/3492d8d6-adde-4665-a875-2025c735dd1c">
+
+| MCU | INT | t0     | t1     | t2     | t3 | t4 | t5 | 
+| --- | --- | ------ | ------ | ------ | -- | -- | -- | 
+| 1   | NO  | 4.0 us | 2.0 us | 2.0 us | -  | -  | -  |
