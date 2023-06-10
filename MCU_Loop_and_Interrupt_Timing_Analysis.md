@@ -140,3 +140,5 @@ void loop() {
 
 
 ```
+
+<img width="576" alt="Timing" src="https://github.com/artkeller/tobedefined/assets/16447285/3492d8d6-adde-4665-a875-2025c735dd1c">
