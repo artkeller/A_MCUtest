@@ -1,6 +1,24 @@
-# "Base" performance and interrupt latency of popular IoT boards and MCUs
+# Performance and interrupt latency of popular IoT boards and MCUs
 
-An easy way to check out well-known IoT boards and MCUs in terms of their "baseline" performance and their interrupt latency.
+An easy way to check out well-known IoT boards and MCUs in terms of their "baseline" performance and their interrupt latency. 
+
+There are two test methods that switch the GPIOs where the measurements are made: 
+1. minimum loop without interrupt
+2. minimum loop with interrupt service routine triggering. 
+
+The simplest way to make a measurement is to use a 4 or 8 channel logic analyser or alternatively a dual channel digital scope
+
+```text
++--------+                                                    +----------------+
+|        | ------ PIN_PORT_ISR ------------ ch. 5 (green) --- | LOGIC ANALYSER |
+|  DUT   | ------ PIN_PORT_INT -- -----+----ch. 6 (blue)  --- | OR DUAL SCOPE  <
+|        | ------ PIN_PORT_ALT_INT ----|                      +----------------+
++--------+
+
+Fug. 1 - Decice under test (DUT) and logic analyser
+```
+
+## Draft Arduino sketch v0.1.6
 
 ```cpp
 /*
