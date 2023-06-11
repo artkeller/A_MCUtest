@@ -187,14 +187,14 @@ All measurements are based on compilations in June 2023 with the **Arduino IDE V
 
 ### RUN_LOOP_INTERRUPTED NO
 
-| Board                 | MCU        | CPU_Freq  | Pattern | t0     | t1     | t2     | Ratio t1:t2 |
-| --------------------- | ---------- | --------: | :-----: | -----: | -----: | -----: | ----------- |
-| Arduino Uno           | ATMEGA328P | 16000000  | A       | 4.0 us | 2.0 us | 2.0 us |             |
-| Arduino 2560          | ATMEGA2569 | 16000000  | A       | 4.0 us | 2.0 us | 2.0 us |             |
-| Trinket M0            | SAMD21     | 48000000  | A       | 4.0 us | 2.0 us | 2.0 us |             |
-| Wemos D1R1            | ESP8266EX  | 80000000  | A       | 4.0 us | 2.0 us | 2.0 us |             |
-| Raspberry Pi Pico W   | RP2040     | 133000000 | A       | 4.0 us | 2.0 us | 2.0 us |             | 
-| M5Stack-Core-ESP32    | ESP32      | 240000000 | A       | 4.0 us | 2.0 us | 2.0 us |             |
+| Board                 | MCU        | CPU_Freq  | Ratio | Pattern | t0     | t1     | t2     | Ratio t1:t2 |
+| --------------------- | ---------- | --------: | ----: | :-----: | -----: | -----: | -----: | ----------- |
+| Arduino Uno           | ATMEGA328P | 16000000  | 1.0   | A       | 4.0 us | 2.0 us | 2.0 us |             |
+| Arduino 2560          | ATMEGA2569 | 16000000  | 1.0   | A       | 4.0 us | 2.0 us | 2.0 us |             |
+| Trinket M0            | SAMD21     | 48000000  | 3.0   | A       | 4.0 us | 2.0 us | 2.0 us |             |
+| Wemos D1R1            | ESP8266EX  | 80000000  | 5.0   | A       | 4.0 us | 2.0 us | 2.0 us |             |
+| Raspberry Pi Pico W   | RP2040     | 133000000 | 8.3   | A       | 4.0 us | 2.0 us | 2.0 us |             | 
+| M5Stack-Core-ESP32    | ESP32      | 240000000 | 15.0  | A       | 4.0 us | 2.0 us | 2.0 us |             |
 
 
 
