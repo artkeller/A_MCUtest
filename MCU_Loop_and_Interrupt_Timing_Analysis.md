@@ -166,19 +166,29 @@ void loop() {
 #endif  // ARDUINO
 
 ```
+## Timing diagram
 
 <img width="576" alt="Timing" src="https://github.com/artkeller/tobedefined/assets/16447285/3492d8d6-adde-4665-a875-2025c735dd1c">
 
-| MCU                | INT | t0     | t1     | t2     | t3     | t4      | t5      | 
-| ------------------ | --- | ------ | ------ | ------ | ------ | ------- | --------| 
-| M5Stack-Core-ESP32 | NO  | 4.0 us | 2.0 us | 2.0 us | -      | -       | -       |
-| M5Stack-Core-ESP32 | YES | 5.5 us | 3.5 us | 2.0 us | 1.0 us | 1.5 us  | 1.0 us  |
-| Wemos D1R1         | NO  | 4.0 us | 2.0 us | 2.0 us | -      | -       | -       |
-| Wemos D1R1         | YES | 4.0 us | 2.0 us | 2.0 us | 1.0 us | 1.5 us  | 1.0 us  |
-| Arduino Uno        | NO  | 4.0 us | 2.0 us | 2.0 us | -      | -       | -       |
-| Arduino Uno        | YES | 4.0 us | 2.0 us | 2.0 us | 1.0 us | 1.5 us  | 1.0 us  |
-| Trnjet M9          | NO  | 4.0 us | 2.0 us | 2.0 us |  -     | -       | -       |
-| Trnjet M9          | YES | 4.0 us | 2.0 us | 2.0 us | 1.0 us | 1.5 us  | 1.0 us  |
-| RP2040             | NO  | 4.0 us | 2.0 us | 2.0 us |  -     | -       | -       |
-| RP2040             | YES | 4.0 us | 2.0 us | 2.0 us | 1.0 us | 1.5 us  | 1.0 us  |
+## Some measurements
+
+### RUN_LOOP_INTERRUPTED NO
+
+| Board                 | MCU        | Freq      | Pattern | t0     | t1     | t2     | Ratio t1:t2 |
+| --------------------- | ---------- | --------- | ------- | ------ | ------ | ------ | ----------- |
+| M5Stack-Core-ESP32    | ESP32      | 240000000 | A       | 4.0 us | 2.0 us | 2.0 us |             |
+| Wemos D1R1            | ESP8266EX  | 80000000  | A       | 4.0 us | 2.0 us | 2.0 us |             |
+| Arduino Uno           | ATMEGA328P | 16000000  | A       | 4.0 us | 2.0 us | 2.0 us |             |
+| Trinket M0            | SAMD21     | 48000000  | A       | 4.0 us | 2.0 us | 2.0 us |             |
+| Raspberry Pi Pico W   | RP2040     | 133000000 | A       | 4.0 us | 2.0 us | 2.0 us |             | 
+
+### RUN_LOOP_INTERRUPTED YES
+
+| Board                 | MCU        | Pattern | t0     | t1     | t2     | t3     | t4      | t5      | 
+| --------------------- | ---------- | ------- | ------ | ------ | ------ | ------ | ------- | --------| 
+| M5Stack-Core-ESP32    | ESP32      | A       | 5.5 us | 3.5 us | 2.0 us | 1.0 us | 1.5 us  | 1.0 us  |
+| Wemos D1R1            | ESP8266EX  | A       | 4.0 us | 2.0 us | 2.0 us | 1.0 us | 1.5 us  | 1.0 us  |
+| Arduino Uno           | ATMEGA328P | A       | 4.0 us | 2.0 us | 2.0 us | 1.0 us | 1.5 us  | 1.0 us  |
+| Trinket M0            | SAMD21     | A       | 4.0 us | 2.0 us | 2.0 us | 1.0 us | 1.5 us  | 1.0 us  |
+| Raspberry Pi Pico W   | RP2040     | A       | 4.0 us | 2.0 us | 2.0 us | 1.0 us | 1.5 us  | 1.0 us  |
 
