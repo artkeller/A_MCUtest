@@ -172,6 +172,8 @@ void loop() {
 
 ## Some measurements
 
+All measurements are based on compilations using the Arduino IDE 2.01 and the latest libraries for each MCU architecture. 
+
 ### RUN_LOOP_INTERRUPTED NO
 
 | Board                 | MCU        | CPU_Freq  | Pattern | t0     | t1     | t2     | Ratio t1:t2 |
