@@ -188,7 +188,7 @@ All measurements are based on compilations in June 2023 with the **Arduino IDE V
 
 It was measured using an 8-channel logic analyser (Saleae clone) with Saleae software v2.4.7.
 
-### RUN_LOOP_INTERRUPTED NO
+### RUN_LOOP_INTERRUPTED=NO
 
 | Board                 | MCU        | CPU_Freq  | Ratio | Pattern | t0 [us] | f0 [kHz] | Clk Cyc | t1 [us] | t2 [us] | Duty [%] |
 | --------------------- | ---------- | --------: | ----: | :-----: | ------: | -------: | ------: | ------: | ------: | -------: |
@@ -196,12 +196,13 @@ It was measured using an 8-channel logic analyser (Saleae clone) with Saleae sof
 | Arduino 2560          | ATMEGA2569 | 16000000  | 1.0   | A       | 11.500  |  86.957  | 184     | 5.563   | 5.938   |  48,37   |
 | Trinket M0            | SAMD21     | 48000000  | 3.0   | A       | 3.667   | 272.727  | 176     | 1,500   | 2.167   |  40.91   |
 | Wemos D1R1            | ESP8266EX  | 80000000  | 5.0   | A       | 10.900  |  91.743  | 872     | 2.000   | 8.900   |  18.35   |
-| Raspberry Pi Pico W   | RP2040     | 133000000 | 8.3   | A       | 4.0     |          |         |2.0     | 2.0     |          | 
-| M5Stack-Core-ESP32    | ESP32      | 240000000 | 15.0  | A       | 4.0     |          |         | 2.0     | 2.0     |          |
+| Raspberry Pi Pico W   | RP2040     | 133000000 | 8.3   | A       | 1.625   | 615.385  | 216     | 0.625   | 1.000   |  37.46   | 
+| Raspberry Pi Pico W   | RP2040     | 240000000 | 15.0  | A       | 0.917   | 1091.000 | 220     | 0.333   | 0.583   |  36.36   |
+| M5Stack-Core-ESP32    | ESP32      | 240000000 | 15.0  | A       | 0.792   | 1263.000 | 190     | 0.333   | 0.458   |  42.11   |
 
 
 
-### RUN_LOOP_INTERRUPTED YES
+### RUN_LOOP_INTERRUPTED=YES
 
 | Board                 | MCU        | CPU_Freq  | Pattern | t0     | t1     | t2     | t3     | t4      | t5      | 
 | --------------------- | ---------- | --------: | :-----: | -----: | -----: | -----: | -----: | ------: | ------: | 
