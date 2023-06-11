@@ -170,14 +170,14 @@ void loop() {
 
 <img width="576" alt="Timing" src="https://github.com/artkeller/tobedefined/assets/16447285/3492d8d6-adde-4665-a875-2025c735dd1c">
 
-## Some measurements
+## Measurements
 
-All measurements are based on compilations using the Arduino IDE 2.01 and the latest libraries for each MCU architecture. 
+All measurements are based on compilations using the **Arduino IDE 2.01** and the latest libraries for each MCU architecture. 
 
 ### RUN_LOOP_INTERRUPTED NO
 
 | Board                 | MCU        | CPU_Freq  | Pattern | t0     | t1     | t2     | Ratio t1:t2 |
-| --------------------- | ---------- | --------- | ------- | ------ | ------ | ------ | ----------- |
+| --------------------- | ---------- | --------: | :-----: | -----: | -----: | -----: | ----------- |
 | Arduino Uno           | ATMEGA328P | 16000000  | A       | 4.0 us | 2.0 us | 2.0 us |             |
 | Arduino 2560          | ATMEGA2569 | 16000000  | A       | 4.0 us | 2.0 us | 2.0 us |             |
 | Trinket M0            | SAMD21     | 48000000  | A       | 4.0 us | 2.0 us | 2.0 us |             |
@@ -190,7 +190,7 @@ All measurements are based on compilations using the Arduino IDE 2.01 and the la
 ### RUN_LOOP_INTERRUPTED YES
 
 | Board                 | MCU        | CPU_Freq  | Pattern | t0     | t1     | t2     | t3     | t4      | t5      | 
-| --------------------- | ---------- | --------- | ------- | ------ | ------ | ------ | ------ | ------- | --------| 
+| --------------------- | ---------- | --------: | :-----: | -----: | -----: | -----: | -----: | ------: | ------: | 
 | Arduino Uno           | ATMEGA328P | 16000000  | A       | 4.0 us | 2.0 us | 2.0 us | 1.0 us | 1.5 us  | 1.0 us  |
 | Arduino 2560          | ATMEGA2560 | 16000000  | A       | 4.0 us | 2.0 us | 2.0 us | 1.0 us | 1.5 us  | 1.0 us  |
 | Trinket M0            | SAMD21     | 48000000  | A       | 4.0 us | 2.0 us | 2.0 us | 1.0 us | 1.5 us  | 1.0 us  |
