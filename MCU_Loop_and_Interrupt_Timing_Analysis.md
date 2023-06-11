@@ -194,7 +194,7 @@ All measurements are based on compilations in June 2023 with the **Arduino IDE V
 | Arduino Uno           | ATMEGA328P | 16000000  | 1.0   | A       | 6.750   | 148.148  | 3.167   | 3.583   |  46.91   |
 | Arduino 2560          | ATMEGA2569 | 16000000  | 1.0   | A       | 11.500  |  86.957  | 5.563   | 5.938   |  48,37   |
 | Trinket M0            | SAMD21     | 48000000  | 3.0   | A       | 3.667   | 272.727  | 1,500   | 2.167   |  40.91   |
-| Wemos D1R1            | ESP8266EX  | 80000000  | 5.0   | A       | 4.0     |          | 2.0     | 2.0     |          |
+| Wemos D1R1            | ESP8266EX  | 80000000  | 5.0   | A       | 10.900  |  91.743  | 2.000   | 8.900   |  18.35   |
 | Raspberry Pi Pico W   | RP2040     | 133000000 | 8.3   | A       | 4.0     |          | 2.0     | 2.0     |          | 
 | M5Stack-Core-ESP32    | ESP32      | 240000000 | 15.0  | A       | 4.0     |          | 2.0     | 2.0     |          |
 
