@@ -182,7 +182,7 @@ First, the undisturbed continuous pattern (A) is measured. Then the other patter
 
 ## Measurements
 
-All measurements are based on compilations using the **Arduino IDE 2.01** and the latest libraries for each MCU architecture. 
+All measurements are based on compilations in June 2023 with the **Arduino IDE 2.01** and the latest libraries for each MCU architecture.
 
 ### RUN_LOOP_INTERRUPTED NO
 
