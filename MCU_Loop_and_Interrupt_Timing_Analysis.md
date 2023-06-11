@@ -3,8 +3,8 @@
 An easy way to check out well-known IoT boards and MCUs in terms of their "baseline" performance and their interrupt latency. 
 
 There are two test methods that switch the GPIOs where the measurements are made: 
-1. minimum loop without interrupt
-2. minimum loop with interrupt service routine triggering. 
+1. minimum **loop()** without interrupt
+2. minimum **loop()** with triggering of interrupt service routine **isr()**. 
 
 The simplest way to make a measurement is to use a 4 or 8 channel logic analyser or alternatively a dual channel digital scope
 
@@ -17,7 +17,7 @@ The simplest way to make a measurement is to use a 4 or 8 channel logic analyser
 
 *) RUN_LOOP_INTERRUPTED YES
 
-Fug. 1 - Decice under test (DUT) and logic analyser
+Fig. 1 - Device under test (DUT) and logic analyser or dual channel digital scope
 ```
 
 Normally two GPIOs are sufficient (PIN_PORT_ISR and PIN_PORT_INT). PIN_PORT_INT indicates loop activity as a common GPIO port and simultaneously triggers the associated interrupt service routine isr() in interrupt test mode (RUN_LOOP_INTERRUPTED YES) on this port PIN_PORT_INT. PIN_PORT_ISR shows the response from isr(). 
@@ -25,6 +25,8 @@ Normally two GPIOs are sufficient (PIN_PORT_ISR and PIN_PORT_INT). PIN_PORT_INT 
 There are breakout boards where a separate interrupt input port (PIN_PORT_ALT_INT) must be configured and connected externally to PIN_PORT_INT.
 
 ## Draft Arduino sketch v0.1.6
+
+It is important to note that there is no assembler optimisation, only native Arduino/C++ code is used.
 
 ```cpp
 /*
@@ -168,7 +170,15 @@ void loop() {
 ```
 ## Timing diagram
 
+The following diagram terms t0..t5 are used for the time series measurements:
+
 <img width="576" alt="Timing" src="https://github.com/artkeller/tobedefined/assets/16447285/3492d8d6-adde-4665-a875-2025c735dd1c">
+
+## Pattern
+
+The measurements showed that there are not only continuous signals. In the "background", i.e. below the loop() routine used by the MCU, there are different time series patterns.
+
+First, the undisturbed continuous pattern (A) is measured. Then the other patterns (B...) are analysed and also measured. The measured pattern is shown in the tables.
 
 ## Measurements
 
