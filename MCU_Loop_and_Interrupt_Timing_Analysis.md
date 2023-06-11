@@ -177,6 +177,7 @@ void loop() {
 | Board                 | MCU        | CPU_Freq  | Pattern | t0     | t1     | t2     | Ratio t1:t2 |
 | --------------------- | ---------- | --------- | ------- | ------ | ------ | ------ | ----------- |
 | Arduino Uno           | ATMEGA328P | 16000000  | A       | 4.0 us | 2.0 us | 2.0 us |             |
+| Arduino 2560          | ATMEGA2569 | 16000000  | A       | 4.0 us | 2.0 us | 2.0 us |             |
 | Trinket M0            | SAMD21     | 48000000  | A       | 4.0 us | 2.0 us | 2.0 us |             |
 | Wemos D1R1            | ESP8266EX  | 80000000  | A       | 4.0 us | 2.0 us | 2.0 us |             |
 | Raspberry Pi Pico W   | RP2040     | 133000000 | A       | 4.0 us | 2.0 us | 2.0 us |             | 
@@ -189,6 +190,7 @@ void loop() {
 | Board                 | MCU        | CPU_Freq  | Pattern | t0     | t1     | t2     | t3     | t4      | t5      | 
 | --------------------- | ---------- | --------- | ------- | ------ | ------ | ------ | ------ | ------- | --------| 
 | Arduino Uno           | ATMEGA328P | 16000000  | A       | 4.0 us | 2.0 us | 2.0 us | 1.0 us | 1.5 us  | 1.0 us  |
+| Arduino 2560          | ATMEGA2560 | 16000000  | A       | 4.0 us | 2.0 us | 2.0 us | 1.0 us | 1.5 us  | 1.0 us  |
 | Trinket M0            | SAMD21     | 48000000  | A       | 4.0 us | 2.0 us | 2.0 us | 1.0 us | 1.5 us  | 1.0 us  |
 | M5Stack-Core-ESP32    | ESP32      | 80000000  | A       | 5.5 us | 3.5 us | 2.0 us | 1.0 us | 1.5 us  | 1.0 us  |
 | Raspberry Pi Pico W   | RP2040     | 133000000 | A       | 4.0 us | 2.0 us | 2.0 us | 1.0 us | 1.5 us  | 1.0 us  |
