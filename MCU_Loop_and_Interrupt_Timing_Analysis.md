@@ -1,3 +1,6 @@
+# "Base" performance and interrupt latency of popular IoT boards and MCUs
+
+An easy way to check out well-known IoT boards and MCUs in terms of their "baseline" performance and their interrupt latency.
 
 ```cpp
 /*
