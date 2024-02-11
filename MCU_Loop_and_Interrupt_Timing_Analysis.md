@@ -53,8 +53,17 @@ With some architectures, it is not possible to use PIN_PORT_INT to trigger the i
 * In most cases, PIN_PORT_INT can be configured as an output port.
 * However, some architectures require a separate interrupt input port if PIN_PORT_INT is configured as an output port.
 
-### Disclaimer 
-This is not a scientific and systematic comprehensive study, but only a **quick, cheap method** to better assess the different MCUs in terms of their basic properties and limitations. Word-width influences or multicore properties, for example, are not examined. 
+äää Disclaimer:
+This study is merely intended to provide a quick and inexpensive method for an initial assessment of the basic characteristics and limitations of various MCUs. It does not claim to be scientific or comprehensively systematic. Certain aspects, such as the effects of word width or the properties of multicore architectures, are not taken into account.
+
+This study is merely intended to provide a quick and inexpensive method for an initial assessment of the basic characteristics and limitations of various MCUs. It does not claim to be scientific or comprehensively systematic. Certain aspects, such as the effects of word width or the properties of multicore architectures, are not taken into account.
+
+The aim of this study is to compare the suitability of different MCUs for simple applications quickly and cost-effectively.
+
+Currently, only a small selection of MCUs has been examined:
+* AVR Family
+* ESP Family
+* RP2040 Family
 
 ## Draft Arduino sketch v0.2.0
 
