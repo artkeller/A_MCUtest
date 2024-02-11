@@ -8,7 +8,7 @@ Measurement of the latency of a hardware interrupt
 Accurate measurement of ISR latency without delays caused by code.
 ## Method
 Logic Analyzer measures the time span between interrupt triggering and port switching.
-## Details
+### Details
 * Resolution of the logic analyzer must be high enough.
 * Several measurements for more accurate results.
 * Loop of the Arduino sketch triggers the interrupt.
