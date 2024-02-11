@@ -63,7 +63,7 @@ It is important to note that there is no assembler optimisation, only native Ard
     Author:     artkeller@gmx.de
     Copyright:  2023 Thomas Walloschke
     Date:       2023-05-09
-    Update:     2023-06-10
+    Update:     2024-02-11
     Licences:   CC BY 4.0 and see Arduino.h (e.g. GNU Lesser General Public License)
 
 */
@@ -71,14 +71,16 @@ It is important to note that there is no assembler optimisation, only native Ard
 /* Check environment */
 #ifdef ARDUINO        // run in Arduino ecosystem only
 #include <Arduino.h>  // selection depends on MCU
+
+/* Basic macros */
 #define YES 1
 #define NO 0
 
 /* Select interrupt test mode */
-#define RUN_LOOP_INTERRUPTED YES
+#define RUN_LOOP_INTERRUPTED YES    // default=YES
 
-/* MCU identification */
-// -- ATMEGA 85
+/* === Definitions of the MCUs that can be tested === */
+// -- ATMEGA 85 ---
 #if defined(ARDUINO_AVR_TRINKET3)  /* ATTN: DRIVER NOT SUPPORTED SINCE 2012 */ \
   || defined(ARDUINO_AVR_TRINKET5) /* ATTN: DRIVER NOT SUPPORTED SINCE 2012 */
 #warning "ATTN: ARDUINO_AVR_TRINKET"
@@ -92,8 +94,9 @@ It is important to note that there is no assembler optimisation, only native Ard
 #define PIN_PORT_INT 2  // TRIGGER & INT  (blue)  SHARED PIN
 #define PIN_PORT_ISR 5  //                (green)
 #endif                  // ARDUINO_AVR_PROTRINKET*
+// -- End of ATMEGA 85 ---
 
-// -- AVR Family
+// -- AVR Family ---
 #if defined(ARDUINO_AVR_UNO) \
   || defined(ARDUINO_AVR_MEGA2560) \
   || defined(ARDUINO_ARCH_AVR)
@@ -101,16 +104,18 @@ It is important to note that there is no assembler optimisation, only native Ard
 #define PIN_PORT_INT 2  // TRIGGER & INT  (blue)  SHARED PIN
 #define PIN_PORT_ISR 5  //                (green)
 #endif                  // ARDUINO_AVR_*
+// -- End of AVR Family ---
 
-// -- SAMD21 Family
+// -- SAMD21 Family ---
 #ifdef ARDUINO_TRINKET_M0
 #warning "ARDUINO_TRINKET_M0"
 #define PIN_PORT_ALT_INT 0  // dedicated INT  (purple) CONNECT TO PIN_PORT_INT
 #define PIN_PORT_INT 2      // TRIGGER        (blue)   CONNECT TO PIN_PORT_ALT_INT
 #define PIN_PORT_ISR 1      //                (green)
 #endif                      // ARDUINO_TRINKET_M0
+// -- End of SAMD21 Family ---
 
-// -- ESP Family (single core measurment - INT on same core)
+// -- ESP Family (single core measurment - INT on same core) ---
 #if not defined(ARDUINO_ARCH_ESP8266) \
   && defined(ESP_PLATFORM)
 #warning "ESP_PLATFORM"
@@ -123,6 +128,7 @@ It is important to note that there is no assembler optimisation, only native Ard
 #define PIN_PORT_INT D3  // TRIGGER & INT  (blue)  SHARED PIN - ATTN: don't use D2
 #define PIN_PORT_ISR D5  //                (green)
 #endif                   // ARDUINO_ESP8266_WEMOS_D1R1
+// -- End of ESP Family ---
 
 // -- RPi Pico 2040 Family (single core measurment - INT on same core)
 #ifdef TARGET_RP2040
@@ -130,11 +136,13 @@ It is important to note that there is no assembler optimisation, only native Ard
 #define PIN_PORT_INT 21  // TRIGGER & INT  (blue)  SHARED PIN
 #define PIN_PORT_ISR 20  //                (green)
 #endif                   // TARGET_RP2040
+// -- End of RPi Pico 2040 Family ---
 
 #if not(defined(PIN_PORT_INT) \
         and defined(PIN_PORT_ISR))
 #error "MCU UNSUPPORTED"
 #endif
+// === End of MCU definitions ===
 
 /* Set up the output port(s) for the logic analyser */
 void setup() {
