@@ -40,7 +40,26 @@ Normally two GPIOs are sufficient (PIN_PORT_ISR and PIN_PORT_INT). PIN_PORT_INT 
 
 There are breakout boards where a separate interrupt input port (PIN_PORT_ALT_INT) must be configured and connected externally to PIN_PORT_INT.
 
-## Disclaimer 
+## Standard configuration:
+
+    As a rule, two GPIOs are used for interrupts: PIN_PORT_ISR and PIN_PORT_INT.
+
+        PIN_PORT_INT serves as a normal GPIO port and indicates the loop activity.
+        In interrupt test mode (RUN_LOOP_INTERRUPTED YES), PIN_PORT_INT simultaneously triggers the associated interrupt service routine (ISR) isr() on this port.
+        PIN_PORT_ISR displays the response of the ISR.
+
+## Configuration of PIN_PORT_INT:
+In most cases, PIN_PORT_INT is configured as the output port, identical to PIN_PORT_ISR.
+
+## Exceptions:
+With some architectures, it is not possible to configure PIN_PORT_INT as an output port. In these cases, a separate interrupt input port (PIN_PORT_ALT_INT) must be used. This must be configured and connected externally to PIN_PORT_INT.
+
+### Additional information:
+* The configuration of PIN_PORT_INT depends on the architecture of the MCU.
+* In most cases, PIN_PORT_INT can be configured as an output port.
+* Some architectures require a separate interrupt input port (PIN_PORT_ALT_INT).
+
+### Disclaimer 
 This is not a scientific and systematic comprehensive study, but only a **quick, cheap method** to better assess the different MCUs in terms of their basic properties and limitations. Word-width influences or multicore properties, for example, are not examined. 
 
 ## Draft Arduino sketch v0.2.0
