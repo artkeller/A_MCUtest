@@ -73,13 +73,15 @@ It is important to note that there is no assembler optimisation, only native Ard
 /*
     MCU Loop and Interrupt Timing Analysis
 
-    Setting up the measurement:      
-      8 channel logic analyser (Saleae original or clone) is recommended.
-      Software used here is Saleae v2.4.7
-      PIN_PORT_INT Connection to the logic analyser channel 6 (blue) is recommended.
-      PIN_PORT_ISR Connection to the logic analyser channel 5 (green) is recommended.
-      In some cases, if the interrupt handler requires a dedicated input pin,
-      PIN_PORT_ALT_INT Connection to the logic analyser channel 7 (purple) is recommended.
+    Measurement setup:
+
+        An 8-channel logic analyzer (e.g. Saleae original or clone) is recommended.
+        Software used: Saleae v2.4.7
+        Connections:
+            PIN_PORT_INT: Logic analyzer channel 6 (blue)
+            PIN_PORT_ISR: Logic analyzer channel 5 (green)
+        Alternative interrupt input (PIN_PORT_ALT_INT):
+            If the interrupt handler requires a separate input pin, logic analyzer channel 7 (purple) is recommended.
 
     Version:    0.2.0
     Author:     artkeller@gmx.de
