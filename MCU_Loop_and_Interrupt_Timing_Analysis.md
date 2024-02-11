@@ -268,7 +268,19 @@ It was measured using an 8-channel logic analyser (Saleae clone) with Saleae sof
     Visuelle Darstellung des Messaufbaus und der Ergebnisse.
     Schnelle und übersichtliche Informationsvermittlung.
 
-## Code-Snippet:
-    Ausschnitt aus dem Arduino-Sketch, der den Interrupt auslöst.
-    Fokus auf die relevanten Codezeilen.
+## Code-Snippet
+Excerpt from the Arduino sketch that triggers the interrupt, with focus on the relevant lines of code.
+
+    void isr() {
+      digitalWrite(PIN_PORT_ISR, true);   // ISR start and interrupt response
+      digitalWrite(PIN_PORT_ISR, false);  // ISR end
+    }
+    
+    /* Continuous minimum loop for logic analysis */
+    void loop() {
+      digitalWrite(PIN_PORT_INT, true);   // loop start and interrupt trigger
+      digitalWrite(PIN_PORT_INT, false);  // loop end
+    }
+
+.
 
