@@ -41,12 +41,11 @@ Normally two GPIOs are sufficient (PIN_PORT_ISR and PIN_PORT_INT). PIN_PORT_INT 
 There are breakout boards where a separate interrupt input port (PIN_PORT_ALT_INT) must be configured and connected externally to PIN_PORT_INT.
 
 ## Standard configuration:
+As a rule, two GPIOs are used for interrupts: PIN_PORT_ISR and PIN_PORT_INT.
 
-    As a rule, two GPIOs are used for interrupts: PIN_PORT_ISR and PIN_PORT_INT.
-
-        PIN_PORT_INT serves as a normal GPIO port and indicates the loop activity.
-        In interrupt test mode (RUN_LOOP_INTERRUPTED YES), PIN_PORT_INT simultaneously triggers the associated interrupt service routine (ISR) isr() on this port.
-        PIN_PORT_ISR displays the response of the ISR.
+* PIN_PORT_INT serves as a normal GPIO port and indicates the loop activity.
+* In interrupt test mode (RUN_LOOP_INTERRUPTED YES), PIN_PORT_INT simultaneously triggers the associated interrupt service routine (ISR) isr() on this port.
+* PIN_PORT_ISR displays the response of the ISR.
 
 ## Configuration of PIN_PORT_INT:
 In most cases, PIN_PORT_INT is configured as the output port, identical to PIN_PORT_ISR.
