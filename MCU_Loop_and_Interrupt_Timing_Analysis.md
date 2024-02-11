@@ -81,7 +81,8 @@ It is important to note that there is no assembler optimisation, only native Ard
             PIN_PORT_INT: Logic analyzer channel 6 (blue)
             PIN_PORT_ISR: Logic analyzer channel 5 (green)
         Alternative interrupt input (PIN_PORT_ALT_INT):
-            If the interrupt handler requires a separate input pin, logic analyzer channel 7 (purple) is recommended.
+            If the interrupt handler requires a separate input pin, 
+            logic analyzer channel 7 (purple) is recommended.
 
     Version:    0.2.0
     Author:     artkeller@gmx.de
