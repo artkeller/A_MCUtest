@@ -118,7 +118,7 @@ It is important to note that there is no assembler optimisation, only native Ard
 /* Select interrupt test mode */
 #define RUN_LOOP_INTERRUPTED YES    // default=YES
 
-/* === Definitions of the MCUs that can be tested === */
+/* === Definitions of the MCUs that can be tested =========================== */
 // -- ATMEGA 85 ---
 #if defined(ARDUINO_AVR_TRINKET3)  /* ATTN: DRIVER NOT SUPPORTED SINCE 2012 */ \
   || defined(ARDUINO_AVR_TRINKET5) /* ATTN: DRIVER NOT SUPPORTED SINCE 2012 */
@@ -181,7 +181,7 @@ It is important to note that there is no assembler optimisation, only native Ard
         and defined(PIN_PORT_ISR))
 #error "MCU UNSUPPORTED"
 #endif
-// === End of MCU definitions ===
+/* === End of MCU definitions ============================================== */
 
 /* Set up the output port(s) for the logic analyser */
 void setup() {
