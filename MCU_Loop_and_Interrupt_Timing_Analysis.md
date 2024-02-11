@@ -2,6 +2,23 @@
 
 An easy way to check out well-known IoT boards and MCUs in terms of their "baseline" performance and their interrupt latency. 
 
+## Aim
+Measurement of the latency of a hardware interrupt
+## Motivation
+Accurate measurement of ISR latency without delays caused by code.
+## Method
+Logic Analyzer measures the time span between interrupt
+triggering and port switching.
+#ä Details
+* Resolution of the logic analyzer must be high enough.
+* Several measurements for more accurate results.
+* Loop of the Arduino sketch triggers the interrupt.
+## Result
+Latency of the interrupt in the form of a time span
+## Comparison with software measurement
+* Higher accuracy due to direct access to hardware.
+* Minimal code changes for optimal performance.
+## Implementation
 There are two test methods that switch the GPIOs where the measurements are made: 
 1. minimum **loop()** without interrupt
 2. minimum **loop()** with triggering of interrupt service routine **isr()**. 
@@ -19,12 +36,13 @@ The simplest way to make a measurement is to use a 4 or 8 channel logic analyser
 
 Fig. 1 - Device under test (DUT) and logic analyser or dual channel digital scope
 ```
-
+## Comments
 Normally two GPIOs are sufficient (PIN_PORT_ISR and PIN_PORT_INT). PIN_PORT_INT indicates loop activity as a common GPIO port and simultaneously triggers the associated interrupt service routine isr() in interrupt test mode (RUN_LOOP_INTERRUPTED YES) on this port PIN_PORT_INT. PIN_PORT_ISR shows the response from isr(). 
 
 There are breakout boards where a separate interrupt input port (PIN_PORT_ALT_INT) must be configured and connected externally to PIN_PORT_INT.
 
-Disclaimer: This is not a scientific and systematic comprehensive study, but only a **quick, cheap method** to better assess the different MCUs in terms of their basic properties and limitations. Word-width influences or multicore properties, for example, are not examined. 
+## Disclaimer 
+This is not a scientific and systematic comprehensive study, but only a **quick, cheap method** to better assess the different MCUs in terms of their basic properties and limitations. Word-width influences or multicore properties, for example, are not examined. 
 
 ## Draft Arduino sketch v0.1.6
 
