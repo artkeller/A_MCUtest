@@ -35,25 +35,25 @@ The simplest way to make a measurement is to use a 4 or 8 channel logic analyser
 
 Fig. 1 - Device under test (DUT) and logic analyser or dual channel digital scope
 ```
-## Standard configuration:
+## Standard configuration
 As a rule, two GPIOs are used for interrupts: PIN_PORT_ISR and PIN_PORT_INT.
 
 * PIN_PORT_INT serves as a normal GPIO port and indicates the loop activity.
 * In interrupt test mode (RUN_LOOP_INTERRUPTED YES), PIN_PORT_INT simultaneously triggers the associated interrupt service routine (ISR) isr() on this port.
 * PIN_PORT_ISR displays the response of the ISR.
 
-## Configuration of PIN_PORT_INT:
+## Configuration of PIN_PORT_INT
 In most cases, PIN_PORT_INT is configured as the output port, identical to PIN_PORT_ISR.
 
-## Exceptions:
+## Exceptions
 With some architectures, it is not possible to use PIN_PORT_INT to trigger the interrupt input port if it is configured as an output port. In these cases, a separate interrupt input port (PIN_PORT_ALT_INT) must be used. This must be configured and connected externally to PIN_PORT_INT.
 
-### Additional information:
+### Additional information
 * The configuration of PIN_PORT_INT depends on the architecture of the MCU.
 * In most cases, PIN_PORT_INT can be configured as an output port.
 * However, some architectures require a separate interrupt input port if PIN_PORT_INT is configured as an output port.
 
-äää Disclaimer:
+### Disclaimer
 This study is merely intended to provide a quick and inexpensive method for an initial assessment of the basic characteristics and limitations of various MCUs. It does not claim to be scientific or comprehensively systematic. Certain aspects, such as the effects of word width or the properties of multicore architectures, are not taken into account.
 
 This study is merely intended to provide a quick and inexpensive method for an initial assessment of the basic characteristics and limitations of various MCUs. It does not claim to be scientific or comprehensively systematic. Certain aspects, such as the effects of word width or the properties of multicore architectures, are not taken into account.
