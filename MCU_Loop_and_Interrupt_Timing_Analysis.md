@@ -279,9 +279,8 @@ It was measured using an 8-channel logic analyser (Saleae clone) with Saleae sof
 | M5Stack-Core-ESP32    | ESP32       | 240000000 | 15.0  | A   |  4.125  |  242.424 |  990    |  3.583  |  0.542  |   86.87  | 1.917   | 0.333   | 1.333   |
 
 ## Infografic
-    TBD: Visuelle Darstellung des Messaufbaus und der Ergebnisse.
-    Schnelle und übersichtliche Informationsvermittlung.
-
+    TBD: Visual representation of the measurement setup and results.
+    Quick and clear information transfer.
 
 
 .
