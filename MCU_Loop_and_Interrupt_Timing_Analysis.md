@@ -35,11 +35,6 @@ The simplest way to make a measurement is to use a 4 or 8 channel logic analyser
 
 Fig. 1 - Device under test (DUT) and logic analyser or dual channel digital scope
 ```
-## Comments
-Normally two GPIOs are sufficient (PIN_PORT_ISR and PIN_PORT_INT). PIN_PORT_INT indicates loop activity as a common GPIO port and simultaneously triggers the associated interrupt service routine isr() in interrupt test mode (RUN_LOOP_INTERRUPTED YES) on this port PIN_PORT_INT. PIN_PORT_ISR shows the response from isr(). 
-
-There are breakout boards where a separate interrupt input port (PIN_PORT_ALT_INT) must be configured and connected externally to PIN_PORT_INT.
-
 ## Standard configuration:
 As a rule, two GPIOs are used for interrupts: PIN_PORT_ISR and PIN_PORT_INT.
 
