@@ -51,7 +51,7 @@ With some architectures, it is not possible to use PIN_PORT_INT to trigger the i
 ### Additional information
 * The configuration of PIN_PORT_INT depends on the architecture of the MCU.
 * In most cases, PIN_PORT_INT can be configured as an output port.
-* However, some architectures require a separate interrupt input port if PIN_PORT_INT is configured as an output port.
+* However, some architectures require a separate interrupt input port PIN_PORT_ALT_INT if PIN_PORT_INT is configured as an output port.
 
 ## Code-Snippet
 Excerpt from the Arduino sketch that triggers the interrupt, with focus on the relevant lines of code.
