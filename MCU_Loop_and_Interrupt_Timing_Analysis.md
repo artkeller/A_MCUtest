@@ -51,12 +51,12 @@ As a rule, two GPIOs are used for interrupts: PIN_PORT_ISR and PIN_PORT_INT.
 In most cases, PIN_PORT_INT is configured as the output port, identical to PIN_PORT_ISR.
 
 ## Exceptions:
-With some architectures, it is not possible to configure PIN_PORT_INT as an output port. In these cases, a separate interrupt input port (PIN_PORT_ALT_INT) must be used. This must be configured and connected externally to PIN_PORT_INT.
+With some architectures, it is not possible to use PIN_PORT_INT to trigger the interrupt input port if it is configured as an output port. In these cases, a separate interrupt input port (PIN_PORT_ALT_INT) must be used. This must be configured and connected externally to PIN_PORT_INT.
 
 ### Additional information:
 * The configuration of PIN_PORT_INT depends on the architecture of the MCU.
 * In most cases, PIN_PORT_INT can be configured as an output port.
-* Some architectures require a separate interrupt input port (PIN_PORT_ALT_INT).
+* However, some architectures require a separate interrupt input port if PIN_PORT_INT is configured as an output port.
 
 ### Disclaimer 
 This is not a scientific and systematic comprehensive study, but only a **quick, cheap method** to better assess the different MCUs in terms of their basic properties and limitations. Word-width influences or multicore properties, for example, are not examined. 
