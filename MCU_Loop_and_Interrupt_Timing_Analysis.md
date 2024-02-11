@@ -43,7 +43,7 @@ There are breakout boards where a separate interrupt input port (PIN_PORT_ALT_IN
 ## Disclaimer 
 This is not a scientific and systematic comprehensive study, but only a **quick, cheap method** to better assess the different MCUs in terms of their basic properties and limitations. Word-width influences or multicore properties, for example, are not examined. 
 
-## Draft Arduino sketch v0.1.6
+## Draft Arduino sketch v0.2.0
 
 It is important to note that there is no assembler optimisation, only native Arduino/C++ code is used.
 
@@ -59,7 +59,7 @@ It is important to note that there is no assembler optimisation, only native Ard
       In some cases, if the interrupt handler requires a dedicated input pin,
       PIN_PORT_ALT_INT Connection to the logic analyser channel 7 (purple) is recommended.
 
-    Version:    0.1.6
+    Version:    0.2.0
     Author:     artkeller@gmx.de
     Copyright:  2023 Thomas Walloschke
     Date:       2023-05-09
