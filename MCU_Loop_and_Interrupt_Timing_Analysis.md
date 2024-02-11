@@ -53,6 +53,20 @@ With some architectures, it is not possible to use PIN_PORT_INT to trigger the i
 * In most cases, PIN_PORT_INT can be configured as an output port.
 * However, some architectures require a separate interrupt input port if PIN_PORT_INT is configured as an output port.
 
+## Code-Snippet
+Excerpt from the Arduino sketch that triggers the interrupt, with focus on the relevant lines of code.
+
+    void isr() {
+      digitalWrite(PIN_PORT_ISR, true);   // ISR start and interrupt response
+      digitalWrite(PIN_PORT_ISR, false);  // ISR end
+    }
+    
+    /* Continuous minimum loop for logic analysis */
+    void loop() {
+      digitalWrite(PIN_PORT_INT, true);   // loop start and interrupt trigger
+      digitalWrite(PIN_PORT_INT, false);  // loop end
+    }
+
 ### Disclaimer
 This study is merely intended to provide a quick and inexpensive method for an initial assessment of the basic characteristics and limitations of various MCUs. It does not claim to be scientific or comprehensively systematic. Certain aspects, such as the effects of word width or the properties of multicore architectures, are not taken into account.
 
@@ -268,19 +282,7 @@ It was measured using an 8-channel logic analyser (Saleae clone) with Saleae sof
     Visuelle Darstellung des Messaufbaus und der Ergebnisse.
     Schnelle und übersichtliche Informationsvermittlung.
 
-## Code-Snippet
-Excerpt from the Arduino sketch that triggers the interrupt, with focus on the relevant lines of code.
 
-    void isr() {
-      digitalWrite(PIN_PORT_ISR, true);   // ISR start and interrupt response
-      digitalWrite(PIN_PORT_ISR, false);  // ISR end
-    }
-    
-    /* Continuous minimum loop for logic analysis */
-    void loop() {
-      digitalWrite(PIN_PORT_INT, true);   // loop start and interrupt trigger
-      digitalWrite(PIN_PORT_INT, false);  // loop end
-    }
 
 .
 
