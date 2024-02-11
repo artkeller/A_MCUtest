@@ -231,4 +231,11 @@ It was measured using an 8-channel logic analyser (Saleae clone) with Saleae sof
 | Raspberry Pi Pico W   | RP2040      | 240000000 | 15.0  | A   |         |          |         |         |         |          |         |         |         |
 | M5Stack-Core-ESP32    | ESP32       | 240000000 | 15.0  | A   |  4.125  |  242.424 |  990    |  3.583  |  0.542  |   86.87  | 1.917   | 0.333   | 1.333   |
 
+## Infografik:
+    Visuelle Darstellung des Messaufbaus und der Ergebnisse.
+    Schnelle und übersichtliche Informationsvermittlung.
+
+## Code-Snippet:
+    Ausschnitt aus dem Arduino-Sketch, der den Interrupt auslöst.
+    Fokus auf die relevanten Codezeilen.
 
