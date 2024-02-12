@@ -42,7 +42,7 @@ As a rule, two GPIOs are used for interrupts: PIN_PORT_ISR and PIN_PORT_INT.
 * In interrupt test mode (RUN_LOOP_INTERRUPTED YES), PIN_PORT_INT simultaneously triggers the associated interrupt service routine (ISR) isr() on this port.
 * PIN_PORT_ISR displays the response of the ISR.
 
-## Configuration of PIN_PORT_INT
+### Configuration of PIN_PORT_INT
 In most cases, PIN_PORT_INT is configured as the output port, identical to PIN_PORT_ISR.
 
 ### Exceptions
