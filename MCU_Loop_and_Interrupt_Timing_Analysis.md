@@ -2,16 +2,15 @@
 
 An easy way to check out well-known IoT boards and MCUs in terms of their "baseline" performance and their interrupt latency. 
 
-## Aim
-Measurement of the latency of a hardware interrupt
-## Motivation
-Accurate measurement of ISR latency without delays caused by code.
+## Aim and Motivation
+- Measurement of the latency of a hardware interrupt. 
+- Accurate measurement of ISR latency without delays caused by code.
 ## Method
 Logic Analyzer measures the time span between interrupt triggering and port switching reaction.
 ### Details
-* Resolution of the logic analyzer must be high enough.
-* Several measurements for more accurate results.
-* Loop of the Arduino sketch triggers the interrupt.
+- Resolution of the logic analyzer must be high enough.
+- Several measurements for more accurate results.
+- Loop of the Arduino sketch triggers the interrupt.
 ## Result
 Latency of the interrupt in the form of a time span
 ## Comparison with software measurement
